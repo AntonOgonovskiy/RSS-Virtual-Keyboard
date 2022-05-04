@@ -1,0 +1,45 @@
+.key {
+	text-align: center;
+	line-height: 50px;
+	font-size: 2em;
+	border-radius: 3px;
+	border: 1px solid black;
+	margin-left: 5px;
+	margin-bottom: 5px;
+}
+
+.letter {
+	width: 50px;
+	height: 50px;
+
+}
+
+.grow1 {
+	flex-grow: 1;
+}
+
+.grow2 {
+	flex-grow: 1.5;
+}
+
+.grow3 {
+	flex-grow: 2;
+}
+
+.key-wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 50px;
+	margin-left: 5px;
+}
+
+.key-half {
+	text-align: center;
+	line-height: 19px;
+	font-size: 2em;
+	border-radius: 3px;
+	border: 1px solid black;
+	width: 50px;
+	height: 23px;
+}
