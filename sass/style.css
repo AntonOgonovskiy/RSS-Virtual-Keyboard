@@ -68,17 +68,20 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 50px;
-  margin-left: 5px;
 }
 
 .key-half {
   text-align: center;
-  line-height: 19px;
+  line-height: 21.5px;
   font-size: 2em;
   border-radius: 3px;
   border: 1px solid black;
   width: 50px;
-  height: 23px;
+  height: 21.5px;
+}
+
+.hidden {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

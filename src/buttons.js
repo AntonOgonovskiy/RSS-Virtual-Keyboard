@@ -1,4 +1,4 @@
-const row1 = [
+const row0 = [
 	{
 		'id': 'Backquote',
 		'class': 'letter',
@@ -105,13 +105,21 @@ const row1 = [
 	},
 	{
 		'id': 'Backspace',
-		'class': 'another',
+		'class': 'grow1',
+		'rus': 'Backspace',
+		'rusUp': 'Backspace',
+		'eng': 'Backspace',
+		'engUp': 'Backspace',
 	},
 ];
-const row2 = [
+const row1 = [
 	{
 		'id': 'Tab',
 		'class': 'grow1',
+		'rus': 'Tab',
+		'rusUp': 'Tab',
+		'eng': 'Tab',
+		'engUp': 'Tab',
 	},
 	{
 		'id': 'KeyQ',
@@ -218,10 +226,14 @@ const row2 = [
 		'engUp': '|',
 	},
 ];
-const row3 = [
+const row2 = [
 	{
 		'id': 'CapsLock',
 		'class': 'grow1',
+		'rus': 'CapsLock',
+		'rusUp': 'CapsLock',
+		'eng': 'CapsLock',
+		'engUp': 'CapsLock',
 	},
 	{
 		'id': 'KeyA',
@@ -314,13 +326,21 @@ const row3 = [
 	{
 		'id': 'Enter',
 		'class': 'grow3',
+		'rus': 'Enter',
+		'rusUp': 'Enter',
+		'eng': 'Enter',
+		'engUp': 'Enter',
 	},
 
 ];
-const row4 = [
+const row3 = [
 	{
 		'id': 'ShiftLeft',
 		'class': 'grow1',
+		'rus': 'Shift',
+		'rusUp': 'Shift',
+		'eng': 'Shift',
+		'engUp': 'Shift',
 	},
 	{
 		'id': 'KeyZ',
@@ -406,32 +426,60 @@ const row4 = [
 	{
 		'id': 'ShiftRight',
 		'class': 'grow1',
+		'rus': 'Shift',
+		'rusUp': 'Shift',
+		'eng': 'Shift',
+		'engUp': 'Shift',
 	},
 ];
-const row5 = [
+const row4 = [
 	{
 		'id': 'ControlLeft',
 		'class': 'letter',
+		'rus': 'Ctrl',
+		'rusUp': 'Ctrl',
+		'eng': 'Ctrl',
+		'engUp': 'Ctrl',
 	},
 	{
 		'id': 'MetaLeft',
 		'class': 'letter',
+		'rus': 'Win',
+		'rusUp': 'Win',
+		'eng': 'Win',
+		'engUp': 'Win',
 	},
 	{
 		'id': 'AltLeft',
 		'class': 'letter',
+		'rus': 'Alt',
+		'rusUp': 'Alt',
+		'eng': 'Alt',
+		'engUp': 'Alt',
 	},
 	{
 		'id': 'Space',
 		'class': 'grow3',
+		'rus': 'Пробел',
+		'rusUp': 'Пробел',
+		'eng': 'Space',
+		'engUp': 'Space',
 	},
 	{
 		'id': 'AltRight',
 		'class': 'letter',
+		'rus': 'Alt',
+		'rusUp': 'Alt',
+		'eng': 'Alt',
+		'engUp': 'Alt',
 	},
 	{
 		'id': 'ControlRight',
 		'class': 'letter',
+		'rus': 'Ctrl',
+		'rusUp': 'Ctrl',
+		'eng': 'Ctrl',
+		'engUp': 'Ctrl',
 	},
 	{
 		'id': 'ArrowLeft',
@@ -466,4 +514,4 @@ const row5 = [
 		'engUp': '&rarr;',
 	},
 ];
-export { row1, row2, row3, row4 };
+export { row0, row1, row2, row3, row4 };
