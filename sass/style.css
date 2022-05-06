@@ -71,7 +71,7 @@ body {
   margin-left: 5px;
   margin-bottom: 5px;
   user-select: none;
-  color: #b9dfff;
+  color: #fff;
   text-shadow: 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff, 0 0 35px #228dff, 0 0 40px #228dff;
 }
 
@@ -98,7 +98,7 @@ body {
 
 .active {
   transform: scale(0.9);
-  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff, 0 0 35px #228dff, 0 0 40px #228dff;
+  box-shadow: 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff, 0 0 35px #228dff, 0 0 40px #228dff;
 }
 
 /*# sourceMappingURL=style.css.map */
