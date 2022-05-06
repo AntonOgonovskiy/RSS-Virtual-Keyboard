@@ -8,7 +8,7 @@ class Row {
 			key.classList.add(i.class)
 			let langRu = document.createElement('span');
 			let langEn = document.createElement('span');
-			langRu.classList.add('hidden');
+			// langRu.classList.add('hidden');
 			let capEn = document.createElement('span');
 			let capEnUp = document.createElement('span');
 			capEnUp.classList.add('hidden');

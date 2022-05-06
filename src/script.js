@@ -14,9 +14,6 @@ function createBody() {
 	inp.setAttribute('placeholder', 'Tap here');
 	const keyboard = document.createElement('div');
 	keyboard.classList.add('keyboard');
-
-
-
 	for (let i = 0; i < 5; i++) {
 		const row = document.createElement('div');
 		row.classList.add('board');
@@ -39,13 +36,38 @@ function createBody() {
 		}
 		keyboard.append(row)
 	}
-
-
-
 	wrap.append(inp);
 	wrap.append(keyboard)
 	bod.prepend(wrap);
 };
 createBody()
+
+function keyboardStyle(event) {
+	const btn = document.getElementById(event.code)
+	if (event.type === 'keydown') {
+		btn.classList.add('active')
+	} else {
+		btn.classList.remove('active')
+	}
+};
+
+function mouseStyle(event) {
+	const btn = document.getElementById(event.target.closest('div').id);
+	if (btn === null) {
+		return
+	}
+	btn.classList.add('active');
+	onmouseup = () => {
+		btn.classList.remove('active');
+	}
+}
+
+
+
+
+document.addEventListener('keydown', keyboardStyle);
+document.addEventListener('keyup', keyboardStyle);
+document.addEventListener('mousedown', mouseStyle);
+
 
 

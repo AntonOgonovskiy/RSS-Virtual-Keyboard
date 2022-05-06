@@ -36,8 +36,8 @@ const row0 = [
 		'class': 'letter',
 		'rus': '4',
 		'rusUp': ';',
-		'eng': '$',
-		'engUp': '4',
+		'eng': '4',
+		'engUp': '$',
 	},
 	{
 		'id': 'Digit5',
@@ -88,7 +88,7 @@ const row0 = [
 		'engUp': ')',
 	},
 	{
-		'id': 'NumpadSubtract',
+		'id': 'Minus',
 		'class': 'letter',
 		'rus': '-',
 		'rusUp': '_',
@@ -240,7 +240,7 @@ const row2 = [
 		'class': 'letter',
 		'rus': 'ф',
 		'rusUp': 'Ф',
-		'eng': 'q',
+		'eng': 'a',
 		'engUp': 'A',
 	},
 	{
@@ -248,7 +248,7 @@ const row2 = [
 		'class': 'letter',
 		'rus': 'ы',
 		'rusUp': 'Ы',
-		'eng': 'w',
+		'eng': 's',
 		'engUp': 'S',
 	},
 	{
@@ -256,7 +256,7 @@ const row2 = [
 		'class': 'letter',
 		'rus': 'в',
 		'rusUp': 'В',
-		'eng': 'e',
+		'eng': 'd',
 		'engUp': 'D',
 	},
 	{
@@ -264,7 +264,7 @@ const row2 = [
 		'class': 'letter',
 		'rus': 'а',
 		'rusUp': 'А',
-		'eng': 'r',
+		'eng': 'f',
 		'engUp': 'F',
 	},
 	{
@@ -272,7 +272,7 @@ const row2 = [
 		'class': 'letter',
 		'rus': 'п',
 		'rusUp': 'П',
-		'eng': 't',
+		'eng': 'g',
 		'engUp': 'G',
 	},
 	{
@@ -280,7 +280,7 @@ const row2 = [
 		'class': 'letter',
 		'rus': 'р',
 		'rusUp': 'Р',
-		'eng': 'y',
+		'eng': 'h',
 		'engUp': 'H',
 	},
 	{
@@ -288,7 +288,7 @@ const row2 = [
 		'class': 'letter',
 		'rus': 'о',
 		'rusUp': 'О',
-		'eng': 'u',
+		'eng': 'j',
 		'engUp': 'J',
 	},
 	{
@@ -296,7 +296,7 @@ const row2 = [
 		'class': 'letter',
 		'rus': 'л',
 		'rusUp': 'Л',
-		'eng': 'i',
+		'eng': 'k',
 		'engUp': 'K',
 	},
 	{
@@ -304,7 +304,7 @@ const row2 = [
 		'class': 'letter',
 		'rus': 'д',
 		'rusUp': 'Д',
-		'eng': 'o',
+		'eng': 'l',
 		'engUp': 'L',
 	},
 	{
@@ -399,7 +399,7 @@ const row3 = [
 		'engUp': 'M',
 	},
 	{
-		'id': 'KeyK',
+		'id': 'Comma',
 		'class': 'letter',
 		'rus': 'б',
 		'rusUp': 'Б',
@@ -407,7 +407,7 @@ const row3 = [
 		'engUp': '<',
 	},
 	{
-		'id': 'KeyL',
+		'id': 'Period',
 		'class': 'letter',
 		'rus': 'ю',
 		'rusUp': 'Ю',
@@ -415,7 +415,7 @@ const row3 = [
 		'engUp': '>',
 	},
 	{
-		'id': 'Semicolon',
+		'id': 'Slash',
 		'class': 'letter',
 		'rus': '.',
 		'rusUp': ',',

@@ -1,6 +1,13 @@
 .input-style {
 	font-size: 2em;
-	border: solid 2px black;
+	border: solid 2px rgb(17, 20, 240);
+	color: #b9dfff;
+	text-shadow: 0 0 15px #fff, 0 0 20px #228dff;
+	background-color: black;
 	padding: 10px;
 	resize: none;
+
+	&:focus {
+		box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff, 0 0 35px #228dff, 0 0 40px #228dff;
+	}
 }
