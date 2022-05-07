@@ -1,7 +1,8 @@
 import { createBody } from "./body.js"
 createBody()
 const capLock = document.getElementById('CapsLock');
-console.log(capLock)
+
+
 
 
 
@@ -63,13 +64,112 @@ function lang(event) {
 	}
 }
 
-
+function shiftOn(event) {
+	const btn = document.getElementById(event.code);
+	const alt = document.getElementById('AltLeft');
+	const cap = document.getElementById("CapsLock");
+	const en = document.querySelectorAll('.en');
+	const enUp = document.querySelectorAll('.enUp');
+	const capEn = document.querySelectorAll('.enCap');
+	const capEnS = document.querySelectorAll('.enCapS');
+	const ru = document.querySelectorAll('.ru');
+	const ruUp = document.querySelectorAll('.ruUp');
+	const capRu = document.querySelectorAll('.ruCap');
+	const capRuS = document.querySelectorAll('.ruCapS');
+	if (btn.id === "ShiftLeft" || btn.id === "ShiftRight") {
+		if (alt.classList.contains('active')) {
+			return
+		}
+		if (cap.classList.contains('active')) {
+			capEn.forEach((item) => item.classList.add('hidden'));
+			capEnS.forEach((item) => item.classList.remove('hidden'));
+			capRu.forEach((item) => item.classList.add('hidden'));
+			capRuS.forEach((item) => item.classList.remove('hidden'));
+		} else {
+			en.forEach((item) => item.classList.add('hidden'));
+			enUp.forEach((item) => item.classList.remove('hidden'));
+			ru.forEach((item) => item.classList.add('hidden'));
+			ruUp.forEach((item) => item.classList.remove('hidden'));
+		}
+	}
+}
+function shiftOff(event) {
+	const btn = document.getElementById(event.code);
+	const cap = document.getElementById("CapsLock");
+	const en = document.querySelectorAll('.en');
+	const enUp = document.querySelectorAll('.enUp');
+	const capEn = document.querySelectorAll('.enCap');
+	const capEnS = document.querySelectorAll('.enCapS');
+	const ru = document.querySelectorAll('.ru');
+	const ruUp = document.querySelectorAll('.ruUp');
+	const capRu = document.querySelectorAll('.ruCap');
+	const capRuS = document.querySelectorAll('.ruCapS');
+	if (btn.id === "ShiftLeft" || btn.id === "ShiftRight") {
+		if (cap.classList.contains('active')) {
+			capEn.forEach((item) => item.classList.remove('hidden'));
+			capEnS.forEach((item) => item.classList.add('hidden'));
+			capRu.forEach((item) => item.classList.remove('hidden'));
+			capRuS.forEach((item) => item.classList.add('hidden'));
+		} else {
+			en.forEach((item) => item.classList.remove('hidden'));
+			enUp.forEach((item) => item.classList.add('hidden'));
+			ru.forEach((item) => item.classList.remove('hidden'));
+			ruUp.forEach((item) => item.classList.add('hidden'));
+		}
+	}
+};
+function shiftClick(event) {
+	const btn = document.getElementById(event.target.closest('div').id);
+	const cap = document.getElementById("CapsLock");
+	const en = document.querySelectorAll('.en');
+	const enUp = document.querySelectorAll('.enUp');
+	const capEn = document.querySelectorAll('.enCap');
+	const capEnS = document.querySelectorAll('.enCapS');
+	const ru = document.querySelectorAll('.ru');
+	const ruUp = document.querySelectorAll('.ruUp');
+	const capRu = document.querySelectorAll('.ruCap');
+	const capRuS = document.querySelectorAll('.ruCapS');
+	if (btn === null) {
+		return
+	}
+	if (event.type === 'mousedown' && (btn.id === 'ShiftLeft' || btn.id === 'ShiftRight')) {
+		btn.classList.add('active')
+		if (cap.classList.contains('active')) {
+			capEn.forEach((item) => item.classList.add('hidden'));
+			capEnS.forEach((item) => item.classList.remove('hidden'));
+			capRu.forEach((item) => item.classList.add('hidden'));
+			capRuS.forEach((item) => item.classList.remove('hidden'));
+		} else {
+			en.forEach((item) => item.classList.add('hidden'));
+			enUp.forEach((item) => item.classList.remove('hidden'));
+			ru.forEach((item) => item.classList.add('hidden'));
+			ruUp.forEach((item) => item.classList.remove('hidden'));
+		}
+		onmouseup = () => {
+			btn.classList.remove('active')
+			if (cap.classList.contains('active')) {
+				capEn.forEach((item) => item.classList.remove('hidden'));
+				capEnS.forEach((item) => item.classList.add('hidden'));
+				capRu.forEach((item) => item.classList.remove('hidden'));
+				capRuS.forEach((item) => item.classList.add('hidden'));
+			} else {
+				en.forEach((item) => item.classList.remove('hidden'));
+				enUp.forEach((item) => item.classList.add('hidden'));
+				ru.forEach((item) => item.classList.remove('hidden'));
+				ruUp.forEach((item) => item.classList.add('hidden'));
+			}
+		}
+	}
+}
 
 
 
 document.addEventListener('keydown', keyboardStyle);
 document.addEventListener('keyup', keyboardStyle);
 document.addEventListener('mousedown', mouseStyle);
+document.addEventListener('mousedown', shiftClick);
 capLock.addEventListener('click', capMouse)
-document.addEventListener('keydown', caps);
 document.addEventListener('keydown', lang);
+document.addEventListener('keydown', caps);
+document.addEventListener('keydown', shiftOn);
+document.addEventListener('keyup', shiftOff);
