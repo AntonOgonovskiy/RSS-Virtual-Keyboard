@@ -1,7 +1,7 @@
 import { createBody } from "./body.js"
 createBody()
 const capLock = document.getElementById('CapsLock');
-
+let language = 'en';
 
 
 
@@ -115,8 +115,8 @@ function shiftOff(event) {
 			enUp.forEach((item) => item.classList.add('hidden'));
 			ru.forEach((item) => item.classList.remove('hidden'));
 			ruUp.forEach((item) => item.classList.add('hidden'));
-		}
-	}
+		};
+	};
 };
 function shiftClick(event) {
 	const btn = document.getElementById(event.target.closest('div').id);
@@ -157,11 +157,34 @@ function shiftClick(event) {
 				enUp.forEach((item) => item.classList.add('hidden'));
 				ru.forEach((item) => item.classList.remove('hidden'));
 				ruUp.forEach((item) => item.classList.add('hidden'));
-			}
-		}
-	}
+			};
+		};
+	};
+};
+function setLocalStorage() {
+	const ru = document.querySelector('.langRu');
+	if (ru.classList.contains('hidden')) {
+		language = 'en'
+	} else {
+		language = 'ru'
+	};
+	localStorage.setItem('language', language);
 }
-
+function translate(language) {
+	const ru = document.querySelectorAll('.langRu');
+	const en = document.querySelectorAll('.langEn');
+	if (language === 'en') {
+		ru.forEach((item) => item.classList.add('hidden'));
+		en.forEach((item) => item.classList.remove('hidden'));
+	} else {
+		ru.forEach((item) => item.classList.remove('hidden'));
+		en.forEach((item) => item.classList.add('hidden'));
+	};
+};
+function getLocalStorage() {
+	language = localStorage.getItem('language')
+	translate(language)
+}
 
 
 document.addEventListener('keydown', keyboardStyle);
@@ -173,3 +196,5 @@ document.addEventListener('keydown', lang);
 document.addEventListener('keydown', caps);
 document.addEventListener('keydown', shiftOn);
 document.addEventListener('keyup', shiftOff);
+window.addEventListener('beforeunload', setLocalStorage);
+window.addEventListener('load', getLocalStorage);
