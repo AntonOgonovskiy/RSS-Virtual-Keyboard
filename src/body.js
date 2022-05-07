@@ -10,7 +10,6 @@ export function createBody() {
 	inp.setAttribute('cols', 100);
 	inp.setAttribute('rows', 10);
 	inp.setAttribute('name', 'textinput');
-	inp.setAttribute('placeholder', 'Tap here');
 	const keyboard = document.createElement('div');
 	keyboard.classList.add('keyboard');
 	for (let i = 0; i < 5; i++) {
