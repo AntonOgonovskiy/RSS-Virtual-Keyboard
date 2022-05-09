@@ -92,6 +92,7 @@ function shiftOn(event) {
 function shiftOff(event) {
     const btn = document.getElementById(event.code);
     const cap = document.getElementById('CapsLock');
+    const alt = document.getElementById('AltLeft');
     const en = document.querySelectorAll('.en');
     const enUp = document.querySelectorAll('.enUp');
     const capEn = document.querySelectorAll('.enCap');
@@ -101,6 +102,9 @@ function shiftOff(event) {
     const capRu = document.querySelectorAll('.ruCap');
     const capRuS = document.querySelectorAll('.ruCapS');
     if (btn.id === 'ShiftLeft' || btn.id === 'ShiftRight') {
+        if (alt.classList.contains('active')) {
+            return;
+        }
         if (cap.classList.contains('active')) {
             capEn.forEach((item) => item.classList.remove('hidden'));
             capEnS.forEach((item) => item.classList.add('hidden'));
