@@ -13,7 +13,7 @@ export default function createBody() {
     inp.setAttribute('cols', 100);
     inp.setAttribute('rows', 10);
     inp.setAttribute('name', 'textinput');
-    inp.setAttribute('placeholder', 'The keyboard was created in the Windows operating system. Shift Alt is used to switch the language. Configuration of ESlint you can find in ".eslintrc.js" file in my repo. I hope you like it. Good luck!');
+    inp.setAttribute('placeholder', 'The keyboard was created in the Windows operating system. Shift Alt is used to switch the language. Configuration of ESlint you can find in ".eslintrc.js" file in my repo. I hope you like it. Good luck! https://github.com/AntonOgonovskiy/RSS-Virtual-Keyboard/tree/virtual_keyboard');
     const keyboard = document.createElement('div');
     keyboard.classList.add('keyboard');
     for (let i = 0; i < 5; i += 1) {
