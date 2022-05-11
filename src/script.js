@@ -5,6 +5,9 @@ const capLock = document.getElementById('CapsLock');
 let language = 'en';
 function keyboardStyle(event) {
     const btn = document.getElementById(event.code);
+    if (btn === null) {
+        return;
+    }
     if (event.type === 'keydown' && btn.id !== 'CapsLock') {
         btn.classList.add('active');
     } else if (event.type === 'keyup' && btn.id !== 'CapsLock') {
@@ -29,6 +32,9 @@ function caps(event) {
     const enUp = document.querySelectorAll('.enCap');
     const ru = document.querySelectorAll('.ru');
     const ruUp = document.querySelectorAll('.ruCap');
+    if (btn === null) {
+        return;
+    }
     if (btn.id === 'CapsLock') {
         btn.classList.toggle('active');
         en.forEach((item) => item.classList.toggle('hidden'));
@@ -72,6 +78,9 @@ function shiftOn(event) {
     const ruUp = document.querySelectorAll('.ruUp');
     const capRu = document.querySelectorAll('.ruCap');
     const capRuS = document.querySelectorAll('.ruCapS');
+    if (btn === null) {
+        return;
+    }
     if (btn.id === 'ShiftLeft' || btn.id === 'ShiftRight') {
         if (alt.classList.contains('active')) {
             return;
@@ -101,6 +110,9 @@ function shiftOff(event) {
     const ruUp = document.querySelectorAll('.ruUp');
     const capRu = document.querySelectorAll('.ruCap');
     const capRuS = document.querySelectorAll('.ruCapS');
+    if (btn === null) {
+        return;
+    }
     if (btn.id === 'ShiftLeft' || btn.id === 'ShiftRight') {
         if (alt.classList.contains('active')) {
             return;
@@ -188,6 +200,9 @@ function getLocalStorage() {
 function keyboardClick(event) {
     const inp = document.getElementById('input');
     const btn = document.getElementById(event.code);
+    if (btn === null) {
+        return;
+    }
     const char = btn.innerText;
     if (char.length === 1) {
         inp.value += char;
